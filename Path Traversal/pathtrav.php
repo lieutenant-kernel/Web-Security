@@ -18,6 +18,6 @@ if (!empty($picture)) {
         echo "File not found: " . htmlspecialchars($file_path);
     }
 } else {
-    echo "Usage: ?picture=filename.jpg (Vulnerable to path traversal!)";
+    echo "Usage: ?pic=filename.jpg (Vulnerable to path traversal!)";
 }
 ?>
