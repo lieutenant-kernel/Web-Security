@@ -1,8 +1,10 @@
-- VM 1 with blog Website with Authentication
-- VM/Host for Cookie Stealing
-- Enable web-facing session hijacking with cloudflare tunnel
+Build the following lab to demonstrate XSS:
 
-<b>Vulnerable target's file-structure</b>
+- VM 1, LAMP-Stack with blog-platform (vulnerable blog)
+- VM/Host for Cookie Stealing (see cookie stealer or flask grabber)
+- Enable web-facing session hijacking with cloudflare tunnel (see how-to)
+
+Vulnerable target's file structure:
 html/
 └── blog/
     ├── authenticate.php  --> check credentials
@@ -12,7 +14,7 @@ html/
     ├── save_post.php     --> writes a blogpost into posts.json 
     └── styles.css        --> CSS
 
-<b>Attacker's Apache-Server file structure:</>
+Attacker's Apache-Server file structure:
 html/
 ├── Cookies.txt           --> cookie-database with timestamps 
 ├── grabber.js            --> Receives cookie after XSS-execution and forwards it to saver.php
