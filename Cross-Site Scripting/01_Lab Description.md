@@ -1,4 +1,4 @@
-<img width="1395" height="735" alt="image" src="https://github.com/user-attachments/assets/d10ba707-18d5-4c11-8e90-9ea0c7d09a09" /><h1>Cross-Site Scripting (XSS) - Lab</h1>
+<h1>Cross-Site Scripting (XSS) - Lab</h1>
 
 Build the following lab to demonstrate a stored XSS-Attack:
 
