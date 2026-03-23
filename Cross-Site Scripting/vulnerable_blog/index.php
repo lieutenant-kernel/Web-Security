@@ -20,7 +20,7 @@
     <button onclick="postBlog()">Posten</button>
     <button style="background-color: green;" onclick="previewBlog()">Vorschau</button>
     <div id="posts">
-      <?php include 'save_post2.php'; ?>
+      <?php include 'save_post.php'; ?>
     </div>
   </div>
   <script>
@@ -30,7 +30,7 @@
         const formData = new FormData();
         formData.append('post', blogText);
 
-        fetch('save_post2.php', {
+        fetch('save_post.php', {
           method: 'POST',
           body: formData
         })
