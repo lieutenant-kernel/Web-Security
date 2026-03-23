@@ -1,0 +1,22 @@
+- VM 1 with blog Website with Authentication
+- VM/Host for Cookie Stealing
+- Enable web-facing session hijacking with cloudflare tunnel
+
+<b>Vulnerable target's file-structure</b>
+html/
+└── blog/
+    ├── authenticate.php  --> check credentials
+    ├── index.php         --> home page, requires login
+    ├── login.html        --> Login-Page to POST credentials
+    ├── posts.json        --> Database for Blogposts
+    ├── save_post.php     --> writes a blogpost into posts.json 
+    └── styles.css        --> CSS
+
+<b>Attacker's Apache-Server file structure:</>
+html/
+├── Cookies.txt           --> cookie-database with timestamps 
+├── grabber.js            --> Receives cookie after XSS-execution and forwards it to saver.php
+└── saver.php             --> Generates timestamp, saves cookie to txt-File
+
+Alternative attacker server:
+- Flask-server for temporary saving of cookies (see flask_cookie_grabber.py)
