@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0; 
+Â Â Â  display: flex;
+Â Â Â  justify-content: center;
+Â Â Â  align-items: center;
+Â Â Â  height: 100vh;
+Â Â Â }
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+Â Â Â  justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+button {
+    display: block;
+    width: 320px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#posts {
+    width: 480px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.post {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+    border: 3px solid #ddd;  
+}
