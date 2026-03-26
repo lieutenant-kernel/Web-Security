@@ -11,7 +11,7 @@ Build the following lab to demonstrate a stored XSS-Attack:
 <b>Vulnerable target's file structure:</b>
 
 <pre>
-htm/
+html/
 └── blog/
     ├── authenticate.php    --> check credentials
     ├── index.php           --> home page, requires login
