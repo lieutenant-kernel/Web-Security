@@ -31,7 +31,7 @@ html/
 </pre>
 
 
-Alternative attacker server:
+<b>Alternative attacker server</b>
 Flask server to save cookies temporarely (see flask_cookie_grabber.py).
 1. Download and run flask cookie grabber (i.e. in VS Code)
 2. Open web browser
