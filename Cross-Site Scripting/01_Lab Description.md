@@ -31,8 +31,10 @@ html/
 </pre>
 
 
-<b>Alternative attacker server</b>
-Flask server to save cookies temporarely (see flask_cookie_grabber.py).
+<b>Alternative attacker server</b><br>
+Use the provided Flask server to save cookies temporarely (see flask_cookie_grabber.py). This server requires the flask-library to function:
+<pre>pip install flask</pre>
+Instructions:
 1. Download and run flask cookie grabber (i.e. in VS Code)
 2. Open web browser
 3. Got to http://localhost:8080
