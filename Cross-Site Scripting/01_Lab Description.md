@@ -20,7 +20,8 @@ htm/
     ├── save_post.php       --> writes a blogpost into posts.json 
     └── styles.css          --> CSS
 </pre>
- 
+⚠️ Change the owner of the blog-directory recursively to www-data
+<pre>sudo chown www-data:www-data -R blog</pre>
 <b>Attacker's Apache-Server file structure:</b>
 <pre>
 html/
@@ -32,6 +33,10 @@ html/
 
 Alternative attacker server:
 Flask server to save cookies temporarely (see flask_cookie_grabber.py).
+1. Download and run flask cookie grabber (i.e. in VS Code)
+2. Open web browser
+3. Got to http://localhost:8080
+4. Successful transmitted cookies appear with time stamp (page refresh needed)
 
 <h2>Stealing the cookie</h2>
 In order to transmit the cookie to the attacker's server, you need to create a payload via stored XSS. It's task is to execute a remote script, which then receives the cookie.
